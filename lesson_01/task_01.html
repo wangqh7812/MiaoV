@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移入显示提醒框</title>
+
+    <style type="text/css">
+        .wrapper {
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .attention {
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            text-align: center;
+            color: #ec7100;
+            border: 1px solid #ec7100;
+            box-sizing: border-box;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <label>
+            <input type="checkbox">自动登录
+        </label>
+        <div class="attention" onmouseover="toShow()" onmouseout="toHide()">
+            注意注意注意注意注意。。。
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toShow() {
+            document.getElementsByClassName("attention").style.display = "block"
+        }
+
+        function toHide() {
+            document.getElementsByClassName("attention").style.display = "none"
+        }
+    </script>
+</body>
+</html>
