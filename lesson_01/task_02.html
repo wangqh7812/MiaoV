@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移入移出改变Div的样式</title>
+
+    <style type="text/css">
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: #ec0000;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box2">
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var /*oBox = document.getElementsByClassName("box2"),*/
+                oHover = document.getElementById("box1");
+
+            oHover.onmouseover = function() {
+                oHover.style.width = "200px";
+                oHover.style.height = "200px";
+                oHover.style.background = "#00ec00";
+            };
+            oHover.onmouseout = function () {
+                oHover.style.width = "100px";
+                oHover.style.height = "100px";
+                oHover.style.background = "#ec0000";
+            };
+        }
+    </script>
+</body>
+</html>
