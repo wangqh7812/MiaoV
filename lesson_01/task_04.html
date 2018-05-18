@@ -3,19 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <title>简单图片展示效果</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .big-box {
+            width: 290px;
+            height: 290px;
+            border: 1px solid #000000;
+            position: relative;
+        }
+
+        .show-box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .pic-1, .pic-2, .pic-3, .pic-4, .pic-5, .pic-6, .pic-7 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+        }
+
+        .big-box img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .show-box>img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .pic-1 {
+            top: 10px;
+            right: 10px;
+        }
+
+        .pic-2 {
+            top: 80px;
+            right: 10px;
+        }
+
+        .pic-3 {
+            top: 150px;
+            right: 10px;
+        }
+
+        .pic-4 {
+            top: 220px;
+            right: 10px;
+        }
+
+        .pic-5 {
+            top: 220px;
+            right: 80px;
+        }
+
+        .pic-6 {
+            top: 220px;
+            right: 150px;
+        }
+
+        .pic-7 {
+            top: 220px;
+            right: 220px;
+        }
+    </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="big-box">
+        <div id="big-box" class="big-box">
             <div class="show-box"><img src="images/task_04_01.jpg" alt="图片1"></div>
-            <div class="pic-1"><img src="images/task_04_01.jpg" alt="图片1"></div>
-            <div class="pic-2"><img src="images/task_04_02.jpg" alt="图片2"></div>
-            <div class="pic-3"><img src="images/task_04_03.jpg" alt="图片3"></div>
-            <div class="pic-4"><img src="images/task_04_04.jpg" alt="图片4"></div>
-            <div class="pic-5"><img src="images/task_04_05.jpg" alt="图片5"></div>
-            <div class="pic-6"><img src="images/task_04_06.jpg" alt="图片6"></div>
-            <div class="pic-7"><img src="images/task_04_07.jpg" alt="图片7"></div>
+            <div class="pic-1 pic"><img src="images/task_04_01.jpg" alt="图片1"></div>
+            <div class="pic-2 pic"><img src="images/task_04_02.jpg" alt="图片2"></div>
+            <div class="pic-3 pic"><img src="images/task_04_03.jpg" alt="图片3"></div>
+            <div class="pic-4 pic"><img src="images/task_04_04.jpg" alt="图片4"></div>
+            <div class="pic-5 pic"><img src="images/task_04_05.jpg" alt="图片5"></div>
+            <div class="pic-6 pic"><img src="images/task_04_06.jpg" alt="图片6"></div>
+            <div class="pic-7 pic"><img src="images/task_04_07.jpg" alt="图片7"></div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var oImg = document.getElementById("big-box").getElementsByClassName("pic").getElementsByTagName("img");
+            var oShowBox = document.getElementById("big-box").getElementsByClassName("show-box");
+
+            for(var i = 1; i < oImg.length; i++){
+                oImg[i].onmouseover() = function () {
+                    var 
+                }
+            }
+
+        }
+    </script>
 </body>
 </html>
