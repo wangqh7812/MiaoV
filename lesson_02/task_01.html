@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>==和===的区别</title>
 </head>
 <body>
-    <div class="wrapper">
-    </div>
+    <script>
+        // ==和===的区别
+        let a = "12";
+        let b = 12;
+
+        alert(a == b); // 会先把两边的东西转换成一样的类型再比较
+        alert(a === b); // 直接比较
+    </script>
 </body>
 </html>
