@@ -87,28 +87,25 @@
     <div class="wrapper">
         <div id="big-box" class="big-box">
             <div class="show-box"><img src="images/task_04_01.jpg" alt="图片1"></div>
-            <div class="pic-1 pic"><img src="images/task_04_01.jpg" alt="图片1"></div>
-            <div class="pic-2 pic"><img src="images/task_04_02.jpg" alt="图片2"></div>
-            <div class="pic-3 pic"><img src="images/task_04_03.jpg" alt="图片3"></div>
-            <div class="pic-4 pic"><img src="images/task_04_04.jpg" alt="图片4"></div>
-            <div class="pic-5 pic"><img src="images/task_04_05.jpg" alt="图片5"></div>
-            <div class="pic-6 pic"><img src="images/task_04_06.jpg" alt="图片6"></div>
-            <div class="pic-7 pic"><img src="images/task_04_07.jpg" alt="图片7"></div>
+            <div class="pic-1"><img src="images/task_04_01.jpg" alt="图片1"></div>
+            <div class="pic-2"><img src="images/task_04_02.jpg" alt="图片2"></div>
+            <div class="pic-3"><img src="images/task_04_03.jpg" alt="图片3"></div>
+            <div class="pic-4"><img src="images/task_04_04.jpg" alt="图片4"></div>
+            <div class="pic-5"><img src="images/task_04_05.jpg" alt="图片5"></div>
+            <div class="pic-6"><img src="images/task_04_06.jpg" alt="图片6"></div>
+            <div class="pic-7"><img src="images/task_04_07.jpg" alt="图片7"></div>
         </div>
     </div>
 
     <script type="text/javascript">
         window.onload = function () {
-            var oImg = document.getElementById("big-box").getElementsByClassName("pic").getElementsByTagName("img");
+            var oImg = document.getElementById("big-box").getElementsByTagName("img");
             var oShowBox = document.getElementById("big-box").getElementsByClassName("show-box");
-
             for(var i = 1; i < oImg.length; i++){
-                oImg[i].onmouseover() = function () {
-                    var
-
+                oImg[i].onmouseover = function () {
+                    oShowBox.src = oImg[1].src = this.src;
                 }
             }
-
         }
     </script>
 </body>

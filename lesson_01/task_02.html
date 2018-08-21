@@ -5,32 +5,39 @@
     <title>鼠标移入移出改变Div的样式</title>
 
     <style type="text/css">
-        .box2 {
+        .green {
             width: 100px;
             height: 100px;
-            background: #ec0000;
+            background: green;
+        }
+
+        .red {
+            width: 200px;
+            height: 200px;
+            background: red;
         }
     </style>
 </head>
 <body>
-    <div id="box1" class="box2">
-    </div>
+    <div id="box1"></div>
+    <div id="box2" class="green"></div>
 
     <script type="text/javascript">
         window.onload = function () {
-            var /*oBox = document.getElementsByClassName("box2"),*/
-                oHover = document.getElementById("box1");
+            var oHover1 = document.getElementById("box1");
 
-            oHover.onmouseover = function() {
-                oHover.style.width = "200px";
-                oHover.style.height = "200px";
-                oHover.style.background = "#00ec00";
+            oHover1.onmouseover = function() {
+                oHover1.style.width = "200px";
+                oHover1.style.height = "200px";
+                oHover1.style.background = "#00ec00";
             };
-            oHover.onmouseout = function () {
-                oHover.style.width = "100px";
-                oHover.style.height = "100px";
-                oHover.style.background = "#ec0000";
+            oHover1.onmouseout = function () {
+                oHover1.style.width = "100px";
+                oHover1.style.height = "100px";
+                oHover1.style.background = "#ec0000";
             };
+
+            var o
         }
     </script>
 </body>
