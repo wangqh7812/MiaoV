@@ -35,21 +35,27 @@
         }
 
         .header {
+            position: relative;
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
             width: 100%;
-            height: 100px;
+            height: 66px;
         }
 
         .header-title {
             width: 200px;
-            height: 40px;
-            line-height: 40px;
+            height: 66px;
+            line-height: 66px;
+            text-align: center;
             float: left;
         }
 
         .change {
-            width: 200px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 60px;
             height: 10px;
-            float: right;
         }
 
         .change li {
@@ -81,8 +87,15 @@
 
         .nav li {
             float: left;
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border: 1px solid #ffffff;
         }
     </style>
+
+    <link rel="stylesheet" href="red.css">
 </head>
 <body>
     <div class="wrapper">
@@ -109,7 +122,21 @@
     </div>
 
     <script type="text/javascript">
-
+        window.onload = function () {
+            var oLink = document.getElementsByTagName("link");
+            var oChange = document.getElementById("change").getElementsByClassName("li");
+            
+            for (var i = 0; i < oChange.length; i++){
+                oChange[i].onclick = function () {
+                    for(var p in oChange) oChange[p].className = "";
+                    //for(p in obj)如果obj是数组，p就是下标，如果obj是对象，p就是属性名称
+                    //var oSkin = document.getElementById("skin").getElementsByTagName("li");这里取得到的oSkin是一个数组。
+                    //oSkin[p]就相当于取数组里面的值，每个值都是一个DOM元素，所以可以使用oSkin[p].className这样的方法。
+                    this.classNeme = "current";
+                    oLink['href'] = this.id + ".css";
+                }
+            } 
+        }
     </script>
 </body>
 </html>

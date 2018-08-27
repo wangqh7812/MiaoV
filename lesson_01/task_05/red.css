@@ -1,10 +1,10 @@
 body{
     background:#FFDDDD;
 }
-#nav{
+.nav{
     background:red;
     border-color:#fff;
 }
-#nav li{
+.nav li{
     border-color:#fff;
 }
