@@ -100,10 +100,10 @@
     <script type="text/javascript">
         window.onload = function () {
             var oImg = document.getElementById("big-box").getElementsByTagName("img");
-            var oShowBox = document.getElementById("big-box").getElementsByClassName("show-box");
             for(var i = 1; i < oImg.length; i++){
                 oImg[i].onmouseover = function () {
-                    oShowBox.src = oImg[1].src = this.src;
+                    var oShowBox = document.getElementById("big-box").getElementsByTagName("img")[0];
+                    oShowBox.src = this.src;
                 }
             }
         }
