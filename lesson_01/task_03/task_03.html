@@ -10,61 +10,120 @@
             padding: 0;
         }
 
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link,a:visited {
+            color: #000;
+        }
+
+        a:hover,a:active {
+            text-decoration: underline;
+        }
         .wrapper {
             width: 200px;
             margin: 0 auto;
             border: 1px solid #777777;
             box-sizing: border-box;
+            position: relative;
         }
 
         .btn {
             width: 196px;
-            height: 26px;
-            line-height: 26px;
+            height: 25px;
+            line-height: 25px;
             margin: 1px auto;
-            background-color: #acacac;
+            background: url("images/down_list_h2_bg.gif") repeat ;
             color: #ffffff;
         }
 
         .btn p {
-            position: relative;
-            left: 26px;
+            margin-left: 10px;
+            color: #000;
         }
 
-        .btn>p::before {
-            content: "";
-            border-bottom: 10px solid #ffffff;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            position: absolute;
-            top: 8px;
-            left: -18px;
+        /*.btn>p::before {*/
+            /*content: "";*/
+            /*border-bottom: 10px solid #ffffff;*/
+            /*border-left: 5px solid transparent;*/
+            /*border-right: 5px solid transparent;*/
+            /*position: absolute;*/
+            /*top: 8px;*/
+            /*left: -18px;*/
+        /*}*/
+
+        /*.btn>p::before {*/
+            /*background: url("images/down.gif");*/
+        /*}*/
+
+        .down {
+            background: url("images/down.gif") no-repeat 160px center;
+        }
+
+        .up {
+            background: url("images/up.gif") no-repeat 160px center;
         }
 
         .content-list {
             display: none;
+            width: 196px;
+            margin: 1px auto;
         }
+
+        .content-list li {
+            width: 186px;
+            height: 25px;
+            line-height: 25px;
+            padding-left: 10px;
+            margin-bottom: 1px;
+            background: url("images/down_list_h2_bg.gif") repeat;
+        }
+
+
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="btn">
-            <p>点击展开</p>
+        <div id="btn" class="btn">
+            <p class="down">点击展开</p>
         </div>
-        <div class="content-list">
+        <div id="list" class="content-list">
             <ul>
-                <li>一一一一</li>
-                <li>二二二二</li>
-                <li>三三三三</li>
-                <li>四四四四</li>
-                <li>五五五五</li>
-                <li>六六六六</li>
+                <li><a href="#">一一一一</a></li>
+                <li><a href="#">二二二二</a></li>
+                <li><a href="#">三三三三</a></li>
+                <li><a href="#">四四四四</a></li>
+                <li><a href="#">五五五五</a></li>
+                <li><a href="#">六六六六</a></li>
             </ul>
         </div>
     </div>
 
     <script>
+        window.onload = function () {
+            var oBtn = document.getElementById("btn");
+            var oP = document.getElementById("btn").getElementsByTagName("p")[0];
+            var oList = document.getElementById("list");
 
-    </script>
+            oBtn.onclick = function () {
+                if (oList.style.display === "none"){
+                    oList.style.display = "block";
+                    oP.className = "up";
+                }
+                else{
+                    oList.style.display = "none";
+                    oP.className = "down";
+                }
+            }
+        }
+    </script>.
+
+
+
 </body>
 </html>

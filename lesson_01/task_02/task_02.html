@@ -11,33 +11,48 @@
             background: green;
         }
 
+        .yellow {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+            top: 250px;
+        }
+
         .red {
             width: 200px;
             height: 200px;
             background: red;
+            position: absolute;
+            top: 250px;
         }
     </style>
 </head>
 <body>
-    <div id="box1"></div>
-    <div id="box2" class="green"></div>
+    <div id="box1" class="green"></div>
+    <div id="box2" class="yellow"></div>
 
     <script type="text/javascript">
         window.onload = function () {
             var oHover1 = document.getElementById("box1");
-
             oHover1.onmouseover = function() {
                 oHover1.style.width = "200px";
                 oHover1.style.height = "200px";
-                oHover1.style.background = "#00ec00";
+                oHover1.style.background = "red";
             };
             oHover1.onmouseout = function () {
                 oHover1.style.width = "100px";
                 oHover1.style.height = "100px";
-                oHover1.style.background = "#ec0000";
+                oHover1.style.background = "green";
             };
 
-            var o
+            var oHover2 = document.getElementById("box2");
+            oHover2.onmouseover = function () {
+                oHover2.className = "red";
+            };
+            oHover2.onmouseout = function () {
+                oHover2.className = "yellow";
+            }
         }
     </script>
 </body>
