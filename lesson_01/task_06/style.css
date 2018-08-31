@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+body {
+    background: #c8c8c8;
+    font-size: 12px;
+}
+
+.wrapper {
+    width: 500px;
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+}
+
