@@ -19,28 +19,27 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-body {
-    background: #c8c8c8;
+/*body {*/
+    /*background: #f0fcff;*/
+    /*font-size: 12px;*/
+/*}*/
+
+.wrapper {
+    background: #f0fcff;
     font-size: 12px;
 }
 
-.wrapper {
-    width: 500px;
-    border: 1px solid #ffffff;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
 .main {
-    width: 490px;
-    box-sizing: border-box;
+    width: 485px;
+    border: 1px solid #d4d4d4;
     margin: 5px auto;
 }
 
 .tab {
-    width: 100%;
-    height: 45px;
-    background: url("images/nav_bg.gif") repeat;
+    width: 485px;
+    height: 44px;
+    border-bottom: 1px solid #d4d4d4;
+    background: url("images/tab_bg.gif") repeat-y -490px 0;
 }
 
 .tab li {
@@ -52,4 +51,6 @@ body {
     width: 25%;
     float: right;
 }
+
+
 
