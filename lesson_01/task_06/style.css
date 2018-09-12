@@ -12,6 +12,7 @@ img {
 }
 
 a:link, a:visited {
+    color: #999999;
     text-decoration: none;
 }
 
@@ -32,25 +33,48 @@ a:hover, a:active {
 .main {
     width: 485px;
     border: 1px solid #d4d4d4;
-    margin: 5px auto;
+    border-top: none;
+    margin: 10px auto;
 }
 
 .tab {
     width: 485px;
     height: 44px;
-    border-bottom: 1px solid #d4d4d4;
-    background: url("images/tab_bg.gif") repeat-y -490px 0;
+    /*border-bottom: 1px solid #d4d4d4;*/
+    background: #ffffff;
 }
 
 .tab li {
     width: 25%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
     float: left;
+    border-right: 1px solid #d4d4d4;
+    box-sizing: border-box;
+    background: url("images/nav_bg.gif") repeat-x;
 }
 
+/* a标签是行内元素，需要设置display，然后还需要设置宽高，不然字有多大它就只有多大*/
 .more {
+    display: block;
     width: 25%;
-    float: right;
+    height: 44px;
+    float: left;
+    line-height: 44px;
+    text-align: center;
+    background: url("images/nav_bg.gif") repeat-x;
 }
+
+.active a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("images/ico.gif") no-repeat center bottom;
+    color: #333333;
+    font-weight: bold;
+}
+
 
 
 
