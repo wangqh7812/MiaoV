@@ -109,11 +109,31 @@ a:hover, a:active {
 }
 .text h3 {
     font-size: 12px;
+    background: url("images/line.gif") repeat-x 0 8px;
 }
 
 
 
+.text h3 a {
+    height: 18px;
+    color: #333333;
+    font-weight: bold;
+    background: #ffffff;
+    padding-right: 5px;
+}
 
+.text h3 a:hover {
+    color: #D31A05;
+}
+.text h3 span {
+    height: 18px;
+    color: #999999;
+    float: right;
+    background: #ffffff;
+    padding-left: 5px;
+}
 
-
-
+.text p {
+    color: #999999;
+    word-spacing: 10px;
+}
