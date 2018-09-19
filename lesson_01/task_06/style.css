@@ -103,6 +103,8 @@ body {
 .content .box {
     width: 445px;
     padding: 20px;
+    overflow: hidden;
+    display: none;
 }
 
 .box .pic {
