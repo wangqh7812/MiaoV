@@ -15,6 +15,7 @@ a {
     width: 512px;
     height: 36px;
     margin: 100px auto 0;
+    position: relative;
 }
 
 .nav {
@@ -28,19 +29,32 @@ a {
     width: 6px;
     height: 36px;
     background: url("images/nav_bg.gif") no-repeat 0 -36px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .adorn2 {
     width: 6px;
     height: 36px;
     background: url("images/nav_bg.gif") no-repeat 0 -72px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .nav li {
     float: left;
+    width: 25%;
     height: 36px;
+    position: relative;
+    cursor: pointer;
 }
 
+.nav li a{
+    display: block;
+
+}
 .nav .line{
     background: url("images/active_bg.gif") no-repeat 0 -90px;
 }
@@ -52,6 +66,7 @@ a {
     color: #ffffff;
     background: url("images/active_bg.gif") no-repeat right -40px;
 }
+
 .float-layer {
     display: none;
 }
