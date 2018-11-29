@@ -45,29 +45,98 @@ a {
 
 .nav li {
     float: left;
+    box-sizing: border-box; /* 不设置整个宽度就超啦*/
     width: 25%;
     height: 36px;
-    position: relative;
+    line-height: 36px;
+    text-align: center;
+    padding: 0 3px 0 7px;
     cursor: pointer;
+    position: relative;
 }
 
-.nav li a{
+.button {
+    color: #ffffff;
     display: block;
-
 }
+
+.active {
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.button:hover, .button:active {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 .nav .line{
     background: url("images/active_bg.gif") no-repeat 0 -90px;
 }
 
-.nav .active {
-    float: left;
-    height: 36px;
-    line-height: 36px;
-    color: #ffffff;
-    background: url("images/active_bg.gif") no-repeat right -40px;
-}
-
 .float-layer {
+    height: 27px;
+    color: #235e99;
+    background: url("images/nav_bg.gif") repeat-x 0 -162px;
+    position: absolute;
+    top: 46px;
+    padding: 0 10px;
     display: none;
 }
 
+/*.float-layer span {*/
+    /*display: block;*/
+/*}*/
+
+.arrow {
+
+    width: 7px;
+    height: 5px;
+    overflow: hidden;
+    background: url("images/active_bg.gif") no-repeat 0 -190px;
+    position: absolute;
+    top: 42px;
+}
+
+.decorate1 {
+    width: 6px;
+    height: 27px;
+    background: url("images/nav_bg.gif") no-repeat 0 -108px;
+    position: absolute;
+    top: 0;
+    left: -6px;
+}
+
+.decorate2 {
+    width: 6px;
+    height: 27px;
+    background: url("images/nav_bg.gif") no-repeat 0 -135px;
+    position: absolute;
+    top: 0;
+    right: -6px;
+}
+
+.float-layer a{
+    float: left;
+    width: 36px;
+    height: 27px;
+    font-size: 12px;
+    color: #235e99;
+    background: url("images/active_bg.gif") no-repeat right -207px;
+    padding: 0 8px;
+    display: block;
+}
+
+.float-box1 {
+    left: 0;
+    display: block;
+}
+
+.float-box1 .arrow {
+    left: 36px;
+}
