@@ -80,6 +80,7 @@ a {
 }
 
 .float-layer {
+    width: 210px;
     height: 27px;
     color: #235e99;
     background: url("images/nav_bg.gif") repeat-x 0 -162px;
@@ -94,13 +95,12 @@ a {
 /*}*/
 
 .arrow {
-
     width: 7px;
     height: 5px;
     overflow: hidden;
     background: url("images/active_bg.gif") no-repeat 0 -190px;
     position: absolute;
-    top: 42px;
+    top: -4px;
 }
 
 .decorate1 {
@@ -125,6 +125,7 @@ a {
     float: left;
     width: 36px;
     height: 27px;
+    line-height: 27px;
     font-size: 12px;
     color: #235e99;
     background: url("images/active_bg.gif") no-repeat right -207px;
@@ -134,9 +135,32 @@ a {
 
 .float-box1 {
     left: 0;
-    display: block;
 }
 
 .float-box1 .arrow {
-    left: 36px;
+    left: 60px;
+}
+
+.float-box2 {
+    left: -10px;
+}
+
+.float-box2 .arrow {
+    left: 70px;
+}
+
+.float-box3 {
+    left: -10px;
+}
+
+.float-box3 .arrow {
+    left: 70px;
+}
+
+.float-box4 {
+    left: -10px;
+}
+
+.float-box4 .arrow {
+    left: 70px;
 }

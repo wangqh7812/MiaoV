@@ -4,11 +4,11 @@ window.onload = function () {
     var aBox = oMain.getElementsByClassName('box');
 
     for (i = 0; i < aLi.length; i++){
-         aLi[i].index = i;
+         aLi[i].index = i;  /*把当前的i值赋给aLi[i]的下标，所以意义在哪*/
          aLi[i].onclick = function () {
-             for (var n = 0; n < aLi.length; n++) aLi[n].className = '';
+             for (n = 0; n < aLi.length; n++) aLi[n].className = '';
              this.className = 'active';
-             for (var n = 0; n <aBox.length; n++) aBox[n].style.display = 'none';
+             for (n = 0; n <aBox.length; n++) aBox[n].style.display = 'none';
              aBox[this.index].style.display = 'block';
          }
     }
