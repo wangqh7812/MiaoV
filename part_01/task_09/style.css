@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+.main {
+    width: 200px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.slide-module {
+    width: 120px;
+    height: 400px;
+    margin: 50px auto;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    position: relative;
+}
+
+.slide-module .up {
+    width: 27px;
+    height: 27px;
+    background: url("images/up.gif") no-repeat;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    margin-left: -16px;
+    cursor: pointer;
+    filter: alpha(opacity:60);  /*filter滤镜*/
+    opacity: 0.6;
+}
+
+.slide-module .down {
+    width: 27px;
+    height: 27px;
+    background: url("images/down.gif") no-repeat;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -16px;
+    cursor: pointer;
+    filter: alpha(opacity:60);
+    opacity: 0.6;
+}
+
+.slide-module .show-box {
+    width: 120px;
+    height: 330px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    overflow: hidden;
+}
+
+.show-box ul {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.show-box li {
+    width: 120px;
+    height: 110px;
+    float: left;
+}
+
+.show-box a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #cfcfcf;
+    margin: 0 auto;
+    position: relative;
+    top: 4px;
+}
+
+.show-box a:hover {
+    border: 1px solid #333333;
+}
+
+.show-box a:active {
+    border: 10px solid #000000;
+}
